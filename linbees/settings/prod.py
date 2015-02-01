@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", get_random_string(50, "abcdefghijklmno
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 TEMPLATE_DEBUG = False
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.linbees.com', '.herokuapp.com']
 
 # Application definition
 ROOT_URLCONF = 'linbees.urls'
