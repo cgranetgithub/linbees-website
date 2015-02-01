@@ -7,7 +7,7 @@ AWS_SECRET_ACCESS_KEY   = os.environ.get('AWS_SECRET_ACCESS_KEY', '')
 # Amazon S3 URL
 AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME", '')
 #S3_URL = 'http://%s.s3-website-eu-west-1.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-S3_URL = 'http://%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
 
 # Static files location
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
