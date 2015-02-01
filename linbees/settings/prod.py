@@ -20,57 +20,35 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'l0cs6*%$^t70i=f@d-k_kor_miipm+b@5&%vxmt$5y2x(om%50'
+from django.utils.crypto import get_random_string
+SECRET_KEY = os.environ.get("SECRET_KEY", get_random_string(50, "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)"))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-TEMPLATE_DEBUG = True
-
+DEBUG = False
+TEMPLATE_DEBUG = False
 ALLOWED_HOSTS = []
 
-
 # Application definition
-
-
-
-
-
 ROOT_URLCONF = 'linbees.urls'
-
 WSGI_APPLICATION = 'linbees.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
-
-
+import dj_database_url
+DATABASES = {'default' :  dj_database_url.config() }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
-
 LANGUAGE_CODE = 'en'
-
-TIME_ZONE = 'Europe/Paris'
-
+TIME_ZONE = 'UTC'
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
+from s3_storage import *
 
-STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
-STATIC_ROOT = os.path.join(DATA_DIR, 'static')
-
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'linbees', 'static'),
-)
 SITE_ID = 1
 
 TEMPLATE_LOADERS = (
@@ -137,7 +115,7 @@ INSTALLED_APPS = (
     'djangocms_picture',
     'djangocms_teaser',
     'djangocms_video',
-    'south',
+    'storages',   # for static files on S3
     'reversion',
     'linbees'
 )
@@ -183,7 +161,18 @@ CMS_PERMISSION = True
 
 CMS_PLACEHOLDER_CONF = {}
 
-DATABASES = {
-    'default':
-        {'ENGINE': 'django.db.backends.sqlite3', 'NAME': 'project.db', 'HOST': 'localhost', 'USER': '', 'PASSWORD': '', 'PORT': ''}
+MIGRATION_MODULES = {
+    'cms': 'cms.migrations_django',
+    'menus': 'menus.migrations_django',
+    'djangocms_text_ckeditor': 'djangocms_text_ckeditor.migrations_django',
+    'djangocms_column': 'djangocms_column.migrations_django',
+    'djangocms_flash': 'djangocms_flash.migrations_django',
+    'djangocms_googlemap': 'djangocms_googlemap.migrations_django',
+    'djangocms_inherit': 'djangocms_inherit.migrations_django',
+    'djangocms_style': 'djangocms_style.migrations_django',
+    'djangocms_file': 'djangocms_file.migrations_django',
+    'djangocms_link': 'djangocms_link.migrations_django',
+    'djangocms_picture': 'djangocms_picture.migrations_django',
+    'djangocms_teaser': 'djangocms_teaser.migrations_django',
+    'djangocms_video': 'djangocms_video.migrations_django'
 }
