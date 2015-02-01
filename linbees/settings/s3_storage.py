@@ -18,4 +18,4 @@ STATIC_URL = S3_URL
 
 # Default File storage
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-MEDIA_URL = S3_URL
+MEDIA_URL = S3_URL + 'media/'
