@@ -4,6 +4,7 @@ South==1.0.2
 argparse==1.2.1
 boto==2.35.1
 dj-database-url==0.3.0
+dj-static==0.0.6
 django-classy-tags==0.6.1
 django-cms==3.0.9
 django-mptt==0.6.1
