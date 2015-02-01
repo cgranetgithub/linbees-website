@@ -1,2 +1,3 @@
 # web: gunicorn service.wsgi
-web: newrelic-admin run-program gunicorn linbees.wsgi
+# web: newrelic-admin run-program gunicorn linbees.wsgi -b 0.0.0.0:$PORT
+web: waitress-serve --port=$PORT linbees.wsgi:application
