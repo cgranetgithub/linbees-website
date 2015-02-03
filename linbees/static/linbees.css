@@ -25,6 +25,13 @@
 /*   color: #0000CC; */
   font-size: 38px;
 }
+#link2video {
+  margin-top: 20px;
+}
 .linbees-blue {
   color: #4069E6;
+}
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
 }
