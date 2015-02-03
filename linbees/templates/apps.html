@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load cms_tags staticfiles sekizai_tags menu_tags %}
+
+{% block content %}
+<div class="container">
+  {% placeholder "title" %}
+</div>
+<div class="container marketing">
+  {% placeholder "apps" %}
+</div>
+{% endblock content %}

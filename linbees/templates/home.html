@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load cms_tags staticfiles sekizai_tags menu_tags %}
+
+{% block content %}
+<div class="container-fluid frontbanner">
+    <div class="jumbotron">
+        {% placeholder "frontbanner" %}
+    </div>
+</div>
+
+<div class="container marketing">
+    {% placeholder "steps" %}
+</div>
+
+<div class="container-fluid signupbanner">
+    {% placeholder "signupbanner" %}
+</div>
+
+<div class="container-fluid bannercolor">
+    <div class="jumbotron">
+        {% placeholder "video" %}
+    </div>
+</div>
+{% endblock content %}
