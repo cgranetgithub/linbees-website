@@ -7,8 +7,8 @@
 }
 .signupbanner {
   background-color: #EEE;
-  padding-bottom: 50px;
-  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-top: 40px;
 }
 .navbar {
   margin-bottom: 0px;
@@ -33,15 +33,27 @@
   color: #4069E6;
 }
 .jumbotron {
-  text-align: center;
-  background-color: transparent;
+    text-align: center;
+    background-color: transparent;
 }
-.marketing {
+.jumbotron .btn {
+    padding: 14px 24px;
+    font-size: 21px;
+}
+.steps {
     margin-bottom: 70px;
     margin-top: 70px;
     text-align: center;
 }
-.marketing img {
+.steps img {
     height: 200px;
     width: 200px;
+}
+.apps-title.steps {
+    margin-bottom: 70px;
+    margin-top: 70px;
+    text-align: center;
+}
+.apps-dl {
+    text-align: center;
 }
