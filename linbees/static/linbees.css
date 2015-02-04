@@ -7,7 +7,8 @@
 }
 .signupbanner {
   background-color: #EEE;
-/*   padding-top: 20px; */
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 .navbar {
   margin-bottom: 0px;
@@ -32,6 +33,15 @@
   color: #4069E6;
 }
 .jumbotron {
+  text-align: center;
+  background-color: transparent;
+}
+.marketing {
+    margin-bottom: 70px;
+    margin-top: 70px;
     text-align: center;
-    background-color: transparent;
+}
+.marketing img {
+    height: 200px;
+    width: 200px;
 }
