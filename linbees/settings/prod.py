@@ -24,8 +24,8 @@ from django.utils.crypto import get_random_string
 SECRET_KEY = os.environ.get("SECRET_KEY", get_random_string(50, "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)"))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-TEMPLATE_DEBUG = False
+DEBUG = os.environ.get("DEBUG", False)
+TEMPLATE_DEBUG = DEBUG
 ALLOWED_HOSTS = ['*']
 
 # Application definition
