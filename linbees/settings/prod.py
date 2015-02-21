@@ -186,7 +186,15 @@ MIGRATION_MODULES = {
     'djangocms_video': 'djangocms_video.migrations_django'
 }
 
+# contact form (CMS plugin) settings
 DEFAULT_FROM_EMAIL = 'contact@linbees.com'
 CMSPLUGIN_CONTACT_FORMS = (
     ('cmsplugin_contact.forms.ContactForm', gettext('default')),
 )
+
+# sendgrid (heroku add-on) settings
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = os.environ.get("SENDGRID_USERNAME", "")
+EMAIL_HOST_PASSWORD = os.environ.get("SENDGRID_PASSWORD", "")
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
