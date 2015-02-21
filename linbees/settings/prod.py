@@ -72,7 +72,8 @@ MIDDLEWARE_CLASSES = (
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
-    'cms.middleware.language.LanguageCookieMiddleware'
+    'cms.middleware.language.LanguageCookieMiddleware',
+    'cmsplugin_contact.middleware.ForceResponseMiddleware'
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -118,6 +119,7 @@ INSTALLED_APPS = (
     'djangocms_picture',
     'djangocms_teaser',
     'djangocms_video',
+    'cmsplugin_contact',
     'storages',   # for static files on S3
     'reversion',
     'linbees'
@@ -183,3 +185,8 @@ MIGRATION_MODULES = {
     'djangocms_teaser': 'djangocms_teaser.migrations_django',
     'djangocms_video': 'djangocms_video.migrations_django'
 }
+
+DEFAULT_FROM_EMAIL = 'contact@linbees.com'
+CMSPLUGIN_CONTACT_FORMS = (
+    ('cmsplugin_contact.forms.ContactForm', gettext('default')),
+)
