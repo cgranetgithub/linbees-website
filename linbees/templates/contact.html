@@ -6,11 +6,15 @@
 {% bootstrap_css %}
 {% bootstrap_javascript %}
 
-      <form action="" method="post" role="form">{% csrf_token %}
-      {% bootstrap_form form %}
-      {% buttons %}
-       <button type="submit" class="btn btn-primary">
-         {% trans "Send" %} {% bootstrap_icon "envelope" %}
-       </button>
-      {% endbuttons %}
-      </form>
+{% if form %}
+    <form action="" method="post" role="form">{% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+    <button type="submit" class="btn btn-primary">
+        {{ contact.submit }} {% bootstrap_icon "envelope" %}
+    </button>
+    {% endbuttons %}
+    </form>
+{% else %}
+    {{ contact.thanks|safe }}
+{% endif %}
