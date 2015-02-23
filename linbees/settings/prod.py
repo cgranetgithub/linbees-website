@@ -123,7 +123,8 @@ INSTALLED_APPS = (
     'cmsplugin_contact',
     'storages',   # for static files on S3
     'reversion',
-    'linbees'
+    'linbees',
+    'gunicorn'
 )
 
 LANGUAGES = (
