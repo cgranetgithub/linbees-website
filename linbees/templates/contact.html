@@ -1,0 +1,16 @@
+{% load i18n %}
+{% load staticfiles %}
+
+{% load bootstrap3 %}
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+      <form action="" method="post" role="form">{% csrf_token %}
+      {% bootstrap_form form %}
+      {% buttons %}
+       <button type="submit" class="btn btn-primary">
+         {% trans "Send" %} {% bootstrap_icon "envelope" %}
+       </button>
+      {% endbuttons %}
+      </form>

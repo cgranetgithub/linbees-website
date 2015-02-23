@@ -105,6 +105,7 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     'django.contrib.staticfiles',
     'django.contrib.messages',
+    'bootstrap3',
     'cms',
     'menus',
     'sekizai',
@@ -190,6 +191,7 @@ MIGRATION_MODULES = {
 DEFAULT_FROM_EMAIL = 'contact@linbees.com'
 CMSPLUGIN_CONTACT_FORMS = (
     ('cmsplugin_contact.forms.ContactForm', gettext('default')),
+    ('contact.forms.CustomContactForm', gettext('custom')),
 )
 
 # sendgrid (heroku add-on) settings
