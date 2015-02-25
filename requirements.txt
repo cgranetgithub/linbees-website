@@ -25,7 +25,6 @@ djangocms-style==1.5
 djangocms-teaser==0.1
 djangocms-text-ckeditor==2.4.3
 djangocms-video==0.1
-gunicorn==19.2.0
 newrelic==2.40.0.34
 html5lib==0.999
 psycopg2==2.5.4
