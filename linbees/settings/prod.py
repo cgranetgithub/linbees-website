@@ -124,7 +124,6 @@ INSTALLED_APPS = (
     'storages',   # for static files on S3
     'reversion',
     'linbees',
-    'gunicorn'
 )
 
 LANGUAGES = (
