@@ -162,6 +162,7 @@ CMS_TEMPLATES = (
     ('page.html', 'Page'),
     ('feature.html', 'Page with Feature'),
     ('home.html', 'Home Page'),
+    ('home2.html', 'Home Page v2'),
     ('apps.html', 'Apps Page'),
     ('pricing.html', 'Pricing Page'),
     #('contact.html', 'Contact Page'),

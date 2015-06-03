@@ -1,0 +1,56 @@
+.frontbanner {
+  color: white;
+/*   background-color: rgb(47, 53, 62); */
+/*   height: 350px; */
+  height: 600px;
+  line-height: 2;
+  padding-top: 40px;
+}
+.signupbanner {
+  background-color: #EEE;
+  padding-bottom: 10px;
+  padding-top: 40px;
+}
+.navbar {
+  margin-bottom: 0px;
+  background-color: rgb(38, 45, 53);
+}
+.navbar-inverse {
+  border-color: transparent;
+  background-color: rgb(38, 45, 53);
+  margin-bottom: 0px;
+}
+#title_part_1 {
+  font-size: 35px;
+}
+#title_part_2 {
+/*   color: #0000CC; */
+  font-size: 38px;
+}
+#link2video {
+  margin-top: 20px;
+}
+.linbees-blue {
+  color: #4069E6;
+}
+.centered {
+    text-align: center;
+}
+.jumbotron {
+    background-color: transparent;
+}
+.jumbotron .btn {
+    padding: 14px 24px;
+    font-size: 21px;
+}
+.steps {
+    margin-bottom: 70px;
+    margin-top: 70px;
+}
+.imgW200 img {
+    height: 200px;
+    width: 200px;
+}
+.imgW400 img {
+    width: 400px;
+}
